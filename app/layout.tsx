@@ -4,7 +4,6 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Mirai Stack — Project Discovery',
   description: "Answer a few questions about your business and we'll scope your project and recommend the right service tier.",
-  icons: { icon: '/favicon.png' },
 };
 
 // Zoom is never locked: people who enlarge text should be able to.
