@@ -1,0 +1,32 @@
+{
+  "name": "miraistack-discovery",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "emulator": "firebase emulators:start --only firestore --project demo-miraistack",
+    "dev:emulator": "cross-env FIRESTORE_EMULATOR_HOST=127.0.0.1:8080 FIREBASE_PROJECT_ID=demo-miraistack next dev"
+  },
+  "dependencies": {
+    "firebase-admin": "^14.4.0",
+    "lucide-react": "^1.47.0",
+    "next": "16.3.5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "resend": "^6.28.1",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "cross-env": "^10.1.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.5",
+    "typescript": "^5"
+  }
+}
