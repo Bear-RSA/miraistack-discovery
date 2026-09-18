@@ -8,10 +8,10 @@ import { Resend } from 'resend';
 =========================================================== */
 
 export const FROM_SYSTEM = 'Mirai Stack Discovery <system@mail.miraistack.co.za>';
-// NOTE: hardcoded to support@ for testing. Restore to team@miraistack.co.za before launch.
-export const TO_TEAM = 'support@miraistack.co.za';
+// Every team email (new submission and consultation request) goes to all of these.
+export const TO_TEAM = ['support@miraistack.co.za', 'accounts@miraistack.co.za'];
 
-interface Message { subject: string; html?: string; text?: string; from?: string; to?: string }
+interface Message { subject: string; html?: string; text?: string; from?: string; to?: string | string[] }
 
 export async function sendTeamEmail(msg: Message): Promise<void> {
   const key = process.env.RESEND_API_KEY;
